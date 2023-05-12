@@ -1,5 +1,16 @@
-// Add imports above this line
-import { galleryItems } from './gallery-items';
-// Change code below this line
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
+import { galleryItems } from './gallery-items.js';
 
-console.log(galleryItems);
+const listGallery = document.querySelector('.gallery');
+galleryItems.forEach(element => {
+  listGallery.insertAdjacentHTML(
+    'beforeend',
+    `<li class="gallery__image"><a href="${element.original}" class="gallery__link"><img class="gallery__image" src="${element.preview}" alt="${element.description}"></a></li>`
+  );
+});
+let galleryCaption = new SimpleLightbox('.gallery__link', {
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+});

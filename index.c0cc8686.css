@@ -1,0 +1,2 @@
+body ul{flex-direction:column;gap:20px;display:flex}body ul li{width:150px;height:auto;text-align:center;background-color:#000;border-radius:15px;padding:12px}body ul li:hover{background-color:#fff;border:1px solid #000;box-shadow:0 2px 4px rgba(0,0,0,.4),0 4px 8px rgba(0,0,0,.4)}body ul li:hover a{color:#000}body ul li a{color:#fafafa;text-decoration:none}
+/*# sourceMappingURL=index.c0cc8686.css.map */
